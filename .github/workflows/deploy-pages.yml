@@ -29,23 +29,7 @@ jobs:
         run: |
           mkdir -p _site
           cp -R Page Estilo Script Assets _site/
-          cat > _site/index.html <<'EOF'
-          <!doctype html>
-          <html lang="pt-BR">
-            <head>
-              <meta charset="UTF-8" />
-              <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-              <meta http-equiv="refresh" content="0; url=Page/index.html" />
-              <title>Conecte-SE 50+</title>
-              <script>
-                window.location.replace("Page/index.html");
-              </script>
-            </head>
-            <body>
-              <p><a href="Page/index.html">Acessar o Conecte-SE 50+</a></p>
-            </body>
-          </html>
-          EOF
+          cp index.html _site/
 
       - name: Enviar arquivos para publicação
         uses: actions/upload-pages-artifact@v3
