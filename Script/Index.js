@@ -56,7 +56,7 @@ function openModal(mode) {
 
 function closeModal() {
   modal.classList.remove("open");
-  document.body.style.overflow = "";
+  document.body.classList.remove("modal-open");
 
   if (previousFocus) {
     previousFocus.focus();
